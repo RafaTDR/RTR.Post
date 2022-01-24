@@ -2,14 +2,14 @@
 <title>{% block title %}{% endblock %} - RTR</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <nav>
-  <h1>RTR POST</h1>
+  <h1>RTR PUBLICAÇÕES</h1>
   <ul>
     {% if g.user %}
       <li><span>{{ g.user['username'] }}</span>
-      <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
+      <li><a href="{{ url_for('auth.logout') }}">Sair</a>
     {% else %}
-      <li><a href="{{ url_for('auth.register') }}">Register</a>
-      <li><a href="{{ url_for('auth.login') }}">Log In</a>
+      <li><a href="{{ url_for('auth.register') }}">Registrar</a>
+      <li><a href="{{ url_for('auth.login') }}">Entrar</a>
     {% endif %}
   </ul>
 </nav>
